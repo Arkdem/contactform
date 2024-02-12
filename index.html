@@ -8,7 +8,7 @@
 
 <body>
     <h1>Contact Us</h1>
-    <form name="contact" method="post"  data-netlify-recaptcha="true" netlify>
+    <form name="contact" method="post"  netlify-honeypot="bot-field" netlify>
 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -18,6 +18,12 @@
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+         
+        <p class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </p>
 
         <input type="submit" value="Submit">
     </form>
